@@ -1,12 +1,8 @@
-package com.hackerrank.java.easy;
+package com.hackerrank.java.subdomain.introduction;
 
 import java.io.*;
-import java.math.*;
-import java.security.*;
 import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
 
 class Result {
 

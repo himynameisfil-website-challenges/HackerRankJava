@@ -1,5 +1,6 @@
-package com.hackerrank.java.easy;
+package com.hackerrank.java.subdomain.introduction;
 
+import com.hackerrank.java.subdomain.introduction.JavaIntToString;
 import org.junit.Before;
 import org.junit.Test;
 

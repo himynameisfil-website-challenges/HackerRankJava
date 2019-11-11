@@ -1,4 +1,4 @@
-package com.hackerrank.java.easy;
+package com.hackerrank.java.subdomain.introduction;
 import org.junit.Test;
 
 import java.io.*;
