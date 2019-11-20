@@ -68,21 +68,21 @@ public class ReverseLinkedList {
     static SinglyLinkedListNode reverse(SinglyLinkedListNode head) {
         List<SinglyLinkedListNode> listOfNodes =   new ArrayList<SinglyLinkedListNode>();
         SinglyLinkedListNode    nodeOfInterest  =   head;
+        //adds all things to a list and reverse orders it
         while (nodeOfInterest != null) {
-//            System.out.println("Printing the currently proccessed node: " + nodeOfInterest.data);
             listOfNodes.add(nodeOfInterest);
             nodeOfInterest  =   nodeOfInterest.next;
         }
+        Collections.reverse(listOfNodes);
+        //iterates in order and sets next as the newly next element
         for (int i = 0; i < listOfNodes.size(); i++) {
-//            System.out.println("Printing the currently proccessed node: " + listOfNodes.get(i).data);
-            if ( i == 0) {
-                listOfNodes.get(i).next =   null;
-            } else {
-                listOfNodes.get(i).next = listOfNodes.get(i - 1);
+            try {
+                listOfNodes.get(i).next = listOfNodes.get(i + 1);
+            } catch (IndexOutOfBoundsException e) {
+                listOfNodes.get(i).next = null;
             }
         }
-//        System.out.println("Printing last " + listOfNodes.get(listOfNodes.size()).data);
-        return listOfNodes.get(listOfNodes.size()-1);
+        return listOfNodes.get(0);
     }
 
     private static final Scanner scanner = new Scanner(System.in);
